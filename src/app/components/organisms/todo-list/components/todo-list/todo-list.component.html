@@ -1,0 +1,14 @@
+<div *ngFor="let todo of todoList; let i = index">
+  <organism-todo-item
+    [todo]="todo"
+    (done)="handleDone(i)($event)"
+  ></organism-todo-item>
+</div>
+
+<organism-todo-item-form
+  (onAddTodo)="addTodo($event)"
+  *ngIf="showTodoForm"
+></organism-todo-item-form>
+<button class="add-button" (click)="handleShowForm()" *ngIf="!showTodoForm">
+  Add Todo
+</button>

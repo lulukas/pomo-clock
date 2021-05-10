@@ -1,0 +1,30 @@
+:host {
+  width: 100vw;
+  height: calc(100vh - var(--size-height-top-bar));
+  margin-top: var(--size-height-top-bar);
+
+  position: relative;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  @media (max-width: 853px) {
+    grid-template-columns: auto;
+    height: auto;
+  }
+}
+
+.timer {
+  justify-self: center;
+}
+
+.todo-list {
+  justify-self: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @media (max-width: 853px) {
+    grid-template-columns: auto;
+    height: auto;
+  }
+}

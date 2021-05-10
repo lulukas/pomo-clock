@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import './styles/variables';
+@import './styles/button';
+@import './styles/textarea';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-text);
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}

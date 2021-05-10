@@ -1,0 +1,32 @@
+:host {
+  display: block;
+
+  color: var(--color-text);
+
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+  padding: 1rem;
+  border: var(--color-primary) 2px solid;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+  label {
+    display: block;
+    opacity: 0.6;
+  }
+
+  textarea {
+    display: block;
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
+  button {
+    align-self: flex-end;
+  }
+}

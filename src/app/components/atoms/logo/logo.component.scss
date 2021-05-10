@@ -1,0 +1,11 @@
+:host {
+  display: flex;
+  align-items: center;
+  color: var(--color-secondary);
+}
+
+.logo {
+  font-family: var(--font-logo);
+  font-size: 2rem;
+  margin-left: 8px;
+}

@@ -1,0 +1,4 @@
+<p class="timer ringing" *ngIf="isRinging">Ring! Ring!</p>
+<p class="timer" *ngIf="!isRinging">
+  {{ minutes | twoDigitNumber }} : {{ seconds | twoDigitNumber }}
+</p>

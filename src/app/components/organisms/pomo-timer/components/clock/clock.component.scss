@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  width: fit-content;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timer {
+  font-family: var(--font-text);
+  font-size: var(--size-font-64);
+  font-weight: 800;
+  letter-spacing: 1pt;
+  font-variant-numeric: tabular-nums;
+
+  &.ringing {
+    font-size: var(--size-font-48);
+    font-weight: 400;
+    font-family: var(--font-logo);
+  }
+}

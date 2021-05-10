@@ -1,0 +1,5 @@
+<form class="todo-form" [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+  <label for="description">Description</label>
+  <textarea rows="5" id="description" formControlName="description"></textarea>
+  <button type="submit">Add</button>
+</form>
