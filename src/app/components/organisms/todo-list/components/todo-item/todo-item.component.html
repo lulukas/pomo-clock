@@ -1,2 +1,14 @@
-<p class="description">{{ todo.description }}</p>
-<button class="small done" (click)="onSetDone()">Done</button>
+<div class="container" [ngClass]="{ done: todo.done }">
+  <p class="text-description">{{ todo.description }}</p>
+  <div class="actions">
+    <a class="done" (click)="onSetDone()" *ngIf="!todo.done">
+      <span class="material-icons"> check </span>
+    </a>
+    <a class="restore" (click)="onSetDone()" *ngIf="todo.done">
+      <span class="material-icons"> restore </span>
+    </a>
+    <a class="delete" (click)="onDelete()"
+      ><span class="material-icons"> delete </span>
+    </a>
+  </div>
+</div>

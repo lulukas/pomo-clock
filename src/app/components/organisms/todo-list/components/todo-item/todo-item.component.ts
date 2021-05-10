@@ -8,14 +8,22 @@ import { ITodo } from '../../todo-list.service';
 })
 export class TodoItemComponent implements OnInit {
   @Input() todo: ITodo;
+  @Output() delete = new EventEmitter<boolean>();
   @Output() done = new EventEmitter<boolean>();
   isDone: boolean = false;
+  buttonLabel: string;
 
   constructor() {}
 
   ngOnInit(): void {
     this.isDone = this.todo?.done;
+    this.buttonLabel = this.todo?.done ? "restore" : "done";
   }
+
+  onDelete = () => {
+    console.log(`delete`)
+    this.delete.emit();
+  };
 
   onSetDone = () => {
     this.done.emit(!this.isDone);

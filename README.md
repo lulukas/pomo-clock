@@ -1,6 +1,6 @@
 # PomoClock
 
-The PomoClock is an Angular Project which is implementing a userinterface to work with the pomodoro technique.
+The PomoClock is an Angular Project which is implementing a userinterface to work with the pomodoro technique. See a running instance [here](https://lulukas.github.io/pomo-clock/)
 
 ## Pomodoro Technique
 

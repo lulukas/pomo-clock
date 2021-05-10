@@ -22,8 +22,8 @@ export class PomoTimerService {
 
   constructor() {
     this.timer = {
-      minutes: 0,
-      seconds: 25,
+      minutes: 25,
+      seconds: 0,
       status: TimerStatus.Ready,
       pomoCount: 0,
       isBreak: false,
@@ -33,12 +33,12 @@ export class PomoTimerService {
   }
 
   private setTimer = () => {
-    this.timer.minutes = 0;
+    this.timer.seconds = 0;
     this.timer.status = TimerStatus.Ready;
     if (this.timer.isBreak) {
-      this.timer.seconds = this.timer.pomoCount < 4 ? 3 : 15;
+      this.timer.minutes = this.timer.pomoCount < 4 ? 3 : 15;
     } else {
-      this.timer.seconds = 25;
+      this.timer.minutes = 25;
     }
   };
 

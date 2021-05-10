@@ -13,60 +13,25 @@ export class TodoListComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  public todoList: ITodo[] = [
-    {
-      description: 'Eiusmod ut deserunt.',
-      done: false,
-    },
-    {
-      description:
-        'Ullamco culpa non non incididunt voluptate laboris ad cillum proident amet est sunt. Elit magna cillum nisi reprehenderit. Eiusmod aute pariatur ut sit eu nisi Lorem labore. Dolore culpa dolor fugiat nisi minim sunt mollit. Sit cillum ea duis sit sunt labore. Anim officia voluptate dolor deserunt qui aliqua officia ea nostrud velit ea culpa.',
-      done: true,
-    },
-    {
-      description:
-        'Ullamco culpa non non incididunt voluptate laboris ad cillum proident amet est sunt. Elit magna cillum nisi reprehenderit. Eiusmod aute pariatur ut sit eu nisi Lorem labore. Dolore culpa dolor fugiat nisi minim sunt mollit. Sit cillum ea duis sit sunt labore. Anim officia voluptate dolor deserunt qui aliqua officia ea nostrud velit ea culpa.',
-      done: true,
-    },
-    {
-      description:
-        'Ullamco culpa non non incididunt voluptate laboris ad cillum proident amet est sunt. Elit magna cillum nisi reprehenderit. Eiusmod aute pariatur ut sit eu nisi Lorem labore. Dolore culpa dolor fugiat nisi minim sunt mollit. Sit cillum ea duis sit sunt labore. Anim officia voluptate dolor deserunt qui aliqua officia ea nostrud velit ea culpa.',
-      done: true,
-    },
-    {
-      description:
-        'Ullamco culpa non non incididunt voluptate laboris ad cillum proident amet est sunt. Elit magna cillum nisi reprehenderit. Eiusmod aute pariatur ut sit eu nisi Lorem labore. Dolore culpa dolor fugiat nisi minim sunt mollit. Sit cillum ea duis sit sunt labore. Anim officia voluptate dolor deserunt qui aliqua officia ea nostrud velit ea culpa.',
-      done: true,
-    },
-    {
-      description:
-        'Ullamco culpa non non incididunt voluptate laboris ad cillum proident amet est sunt. Elit magna cillum nisi reprehenderit. Eiusmod aute pariatur ut sit eu nisi Lorem labore. Dolore culpa dolor fugiat nisi minim sunt mollit. Sit cillum ea duis sit sunt labore. Anim officia voluptate dolor deserunt qui aliqua officia ea nostrud velit ea culpa.',
-      done: true,
-    },
-    {
-      description:
-        'Ullamco culpa non non incididunt voluptate laboris ad cillum proident amet est sunt. Elit magna cillum nisi reprehenderit. Eiusmod aute pariatur ut sit eu nisi Lorem labore. Dolore culpa dolor fugiat nisi minim sunt mollit. Sit cillum ea duis sit sunt labore. Anim officia voluptate dolor deserunt qui aliqua officia ea nostrud velit ea culpa.',
-      done: true,
-    },
-    
-  ];
+  public todoList: ITodo[] = [];
 
   addTodo = (todo: ITodo) => {
-    console.log(
-      '🚀 ~ file: todo-list.component.ts ~ line 29 ~ TodoListComponent ~ todo',
-      todo
-    );
     this.todoList.push(todo);
     this.showTodoForm = false;
   };
 
-  removeTodo = (index: number) => {
+  removeTodo = (index: number) => () => {
     if (index > -1) this.todoList.splice(index, 1);
   };
 
   handleDone = (index: number) => (done: boolean) => {
     console.log(`index`, index);
     console.log(`done`, done);
+    if (index > -1) {
+      const newTodo = { description: this.todoList[index].description, done };
+      this.todoList.splice(index, 1);
+      this.todoList.push(newTodo);
+    }
   };
 
   handleShowForm = () => (this.showTodoForm = true);

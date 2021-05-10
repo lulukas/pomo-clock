@@ -1,4 +1,6 @@
-:host {
+.container {
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,13 +11,33 @@
   margin: 0.5rem 0;
   padding: 1rem;
   border: var(--color-primary) 2px solid;
+
+  &.done {
+    background-color: rgb(216, 216, 216);
+    opacity: 0.6;
+  } 
 }
 
-.description {
+.text-description {
   font-size: var(--size-font-20);
 }
 
-.done {
-  align-self: flex-end;
-  margin: 0.5rem;
+.actions{
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  a {
+    margin: 0 0.1rem;
+
+    &.close{
+      color: gray;
+    }
+    &.done{
+      color: green;
+    }
+    &.restore{
+      color: red;
+    }
+  }
 }

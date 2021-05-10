@@ -1,14 +1,31 @@
-<div *ngFor="let todo of todoList; let i = index">
-  <organism-todo-item
-    [todo]="todo"
-    (done)="handleDone(i)($event)"
-  ></organism-todo-item>
+<p class="empty-list" *ngIf="todoList.length < 1">
+  Please enter some todos first
+</p>
+
+<div class="list">
+  <div *ngFor="let todoItems of todoList | isDone: false; let i = index">
+    <organism-todo-item
+      [todo]="todoItems.todo"
+      (done)="handleDone(todoItems.index)($event)"
+      (delete)="removeTodo(todoItems.index)()"
+    ></organism-todo-item>
+  </div>
+  <button class="add-button" (click)="handleShowForm()" *ngIf="!showTodoForm">
+    Add Todo
+  </button>
+
+  <organism-todo-item-form
+    (onAddTodo)="addTodo($event)"
+    *ngIf="showTodoForm"
+  ></organism-todo-item-form>
 </div>
 
-<organism-todo-item-form
-  (onAddTodo)="addTodo($event)"
-  *ngIf="showTodoForm"
-></organism-todo-item-form>
-<button class="add-button" (click)="handleShowForm()" *ngIf="!showTodoForm">
-  Add Todo
-</button>
+<div class="list">
+  <div *ngFor="let todoItems of todoList | isDone: true; let i = index">
+    <organism-todo-item
+      [todo]="todoItems.todo"
+      (done)="handleDone(todoItems.index)($event)"
+      (delete)="removeTodo(todoItems.index)()"
+    ></organism-todo-item>
+  </div>
+</div>
