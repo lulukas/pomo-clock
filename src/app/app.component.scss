@@ -1,9 +1,9 @@
 :host {
   display: inline-block;
-  background-color: var(--color-secondary);
+  background: linear-gradient(139deg, #ffe6e6, #fcfaf5);
 }
 
-.top-bar{
+.top-bar {
   position: fixed;
   top: 0;
   left: 0;

@@ -2,15 +2,17 @@
   width: 100vw;
   height: calc(100vh - var(--size-height-top-bar));
   margin-top: var(--size-height-top-bar);
-
+  
   position: relative;
-
+  
   display: grid;
-  grid-template-columns: auto 1fr;
-
+  grid-template-columns: 1fr 2fr;
+  
   @media (max-width: 853px) {
     grid-template-columns: auto;
+    grid-template-rows: auto 1fr;
     height: auto;
+    min-height: calc(100vh - var(--size-height-top-bar));
   }
 }
 
@@ -22,9 +24,4 @@
   justify-self: center;
   overflow-x: hidden;
   overflow-y: auto;
-
-  @media (max-width: 853px) {
-    grid-template-columns: auto;
-    height: auto;
-  }
 }
