@@ -9,6 +9,7 @@ import { OrganismsModule } from './components/organisms/organisms.module'
 import { MainPageComponent } from './components/pages/main/main.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { SettingsPageComponent } from './components/pages/settings/settings.component';
 
 //pages
 
@@ -16,6 +17,7 @@ import { environment } from '../environments/environment';
   declarations: [
     AppComponent,
     MainPageComponent,
+    SettingsPageComponent,
   ],
   imports: [
     BrowserModule,
