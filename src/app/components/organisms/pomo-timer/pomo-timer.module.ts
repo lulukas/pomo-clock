@@ -9,13 +9,20 @@ import { TwoDigitNumberPipe } from './pipes/two-digit-number.pipe';
 import { PomoTimerService } from './pomo-timer.service';
 import { FillPipePipe } from './pipes/fill-pipe.pipe';
 import { AtomsModule } from '../../atoms/atoms.module';
+import { PomoTimerSettingsComponent } from './components/pomo-timer-settings/pomo-timer-settings.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [ClockComponent, PomoTimerComponent, PomoTimerButtonLabelPipe, TwoDigitNumberPipe, FillPipePipe],
-  imports: [CommonModule, AtomsModule],
-  providers: [
-    PomoTimerService,
+  declarations: [
+    ClockComponent,
+    PomoTimerComponent,
+    PomoTimerButtonLabelPipe,
+    TwoDigitNumberPipe,
+    FillPipePipe,
+    PomoTimerSettingsComponent,
   ],
-  exports: [PomoTimerComponent],
+  imports: [CommonModule, AtomsModule, ReactiveFormsModule],
+  providers: [PomoTimerService],
+  exports: [PomoTimerComponent, PomoTimerSettingsComponent],
 })
 export class PomoTimerModule {}

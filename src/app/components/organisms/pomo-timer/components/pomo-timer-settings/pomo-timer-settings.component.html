@@ -1,0 +1,12 @@
+<p class="title">Pomo Timer Settings</p>
+<form class="settings-form" [formGroup]="settingsForm" (ngSubmit)="onSubmit()">
+  <label for="shortBreak">Short break (minutes)</label>
+  <input type="number" id="shortBreak" formControlName="shortBreak" />
+  <label for="longBreak">Long break (minutes)</label>
+  <input type="number" id="longBreak" formControlName="longBreak" />
+  <label for="workTime">Working time (minutes)</label>
+  <input type="number" id="workTime" formControlName="workTime" />
+  <label for="pomos">Pomos befor long break</label>
+  <input type="number" id="pomos" formControlName="pomos" />
+  <button type="submit" class="submit-button">Change Settings</button>
+</form>
