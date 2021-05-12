@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1620663543909,
+  "timestamp": 1620831296449,
   "index": "/pomo-clock/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/pomo-clock/favicon.ico",
         "/pomo-clock/index.html",
-        "/pomo-clock/main.36b1f572b4c670c2cb41.js",
+        "/pomo-clock/main.618129c419d2bb869641.js",
         "/pomo-clock/manifest.webmanifest",
         "/pomo-clock/polyfills.00096ed7d93ed26ee6df.js",
         "/pomo-clock/runtime.7b63b9fd40098a2e8207.js",
-        "/pomo-clock/styles.b6f1e0d8895d9b777f16.css"
+        "/pomo-clock/styles.7b5f55463840479d569e.css"
       ],
       "patterns": []
     },
@@ -46,12 +46,12 @@
     "/pomo-clock/assets/icons/icon-512x512.png": "fa44499f2211401324b22e9b64e652cd6dd13ea3",
     "/pomo-clock/assets/mixkit-games-worldbeat-466.mp3": "b7b6e4976a66589753d2ca120c22b05f50720f37",
     "/pomo-clock/favicon.ico": "a3af4ad7f053c8f88c738349d009efad0435b7d7",
-    "/pomo-clock/index.html": "f4b9c2879fcc9cdc22c4f32604ee2d38d1cdefae",
-    "/pomo-clock/main.36b1f572b4c670c2cb41.js": "1b8da49b539dc5c1949f1ab52f4ec4825b704d9b",
+    "/pomo-clock/index.html": "4e682bda34f1b0a977f67fce8edb2ed180f866a8",
+    "/pomo-clock/main.618129c419d2bb869641.js": "6284d4efcd1bce38fdfc4e21bce86ee303adc158",
     "/pomo-clock/manifest.webmanifest": "79c1c1e411c9b78b2b43a5fb76f8e374d502fb03",
     "/pomo-clock/polyfills.00096ed7d93ed26ee6df.js": "cfe7b0b53e96bff9ba384b4d497c08475a617d62",
     "/pomo-clock/runtime.7b63b9fd40098a2e8207.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/pomo-clock/styles.b6f1e0d8895d9b777f16.css": "63aedb52729ee6c8c31f9e0fced304bb12f805ef"
+    "/pomo-clock/styles.7b5f55463840479d569e.css": "ddb08574b8ba0a07336fe1e2a12406834cfe7e5b"
   },
   "navigationUrls": [
     {
